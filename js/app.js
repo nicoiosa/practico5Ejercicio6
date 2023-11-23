@@ -46,6 +46,8 @@ function reset() {
   clock.innerHTML = "00 : 00 : 00";
   btns[0].innerText = "Iniciar";
   isRunning = false;
+  btns[0].removeEventListener("click", resume);
+  formTime.addEventListener("submit", start);
 }
 
 function display() {
